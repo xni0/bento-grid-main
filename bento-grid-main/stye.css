@@ -1,0 +1,401 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "DM Sans";
+  font-style: normal;
+  src: url("assets/fonts/DMSans-VariableFont_opsz,wght.ttf") format("truetype");
+  font-weight: 100 1000;
+}
+
+@font-face {
+  font-family: "DM Sans";
+  font-style: italic;
+  src: url("assets/fonts/DMSans-Italic-VariableFont_opsz,wght.ttf")
+    format("truetype");
+  font-weight: 100 1000;
+}
+
+:root {
+  /* paleta colores*/
+  --background-color-celda-amarillo-claro: #faeee2;
+  --background-color-celda-amarillo-oscuro: #ffcc69;
+  --background-color-celda-purpura: #7651dc;
+  --background-color-celda-lila: #dcd1fc;
+  --background-color-celda-blanca: #ffffff;
+  --background-color-body: #f5f5f5;
+  --color-texto-negro: #1b1716;
+  --color-texto-blanco: #feffff;
+  --color-texto-purpura: #7551d9;
+
+  /* tamaños */
+
+  --width-tamaño-contenedor: 50%;
+  --width-imagen-celda9: 190px;
+  --width-imagen-celda8: 300px;
+  --width-imagen-celda11: 150px;
+  --width-imagen-celda2: 150px;
+  --width-imagen-celda6: 190px;
+  --width-imagen-celda3: 130%;
+  --min-height-body: 100vh;
+  --padding-contenedor: 40px 150px;
+  --padding-celda1: 55px 30px;
+  --padding-p-left-celda8: 20px;
+  --padding-p-bottom-celda8: 20px;
+
+  --width-tamaño-imagen-celda1: 180px;
+  --width-imagen-celda17: 200px;
+  --padding-imagen-celda17: 30px 0px 60px 5px;
+  --padding-top-imagen-celda1: 15px;
+  --padding-right-celda1: 10px;
+  --padding-celda2: 20px 20px;
+  --padding-celda3: 20px;
+  --padding-celda11: 15px;
+  --padding-celda9: 20px; 
+  --padding-general-celda3: 30px; 
+
+  --padding-top-frase-grande-celda2: 50px;
+  --padding-right-frase-grande-celda2: 20px;
+  --padding-left-frase-grande-celda2: 20px;
+
+  --padding-imagen-celda8-top: 10px;
+  --padding-imagen-celda8-left: 10px;
+  --padding-imagen-celda8-left: 10px;
+  --padding-left-celda6: 25px;
+  --padding-celda6-texto: 22px 30px 0px 0px;
+
+  --padding-right-imagen-celda6: 15px;
+  --padding-top-imagen-celda6: 10px;
+
+  /* tipografías */
+
+  --font-primary: "DM Sans", sans-serif;
+  --font-size-celda-mediana: 2.2rem;
+  --font-size-letra-grande-celda2: 3rem;
+  --font-size-celda6: 1.6rem;
+  --font-size-celda11: 3rem;
+  --font-size-p-celda9: 1.9rem;
+  --font-size-p-grande-celda3: 1.8rem;
+  --font-size-p-pequeño-celda3: 1.1rem;
+  --font-size-celda8: 1.5rem;
+
+  --font-style-italic: italic;
+  --font-weight: bold;
+
+  /* border radius */
+  --border-radius-celda: 10px;
+  --border-radius-imagen-celda8: 34%;
+
+
+  /* positions */
+  --text-align-center: center;
+
+  /* alineacion */
+  --line-height-general: 80%;
+  --line-height-contenedor-grande: 230%;
+  --line-height-celda8: 150%;
+  --line-height-celda6: 95%;
+  --line-height-celda9: 110%;
+  --line-height-celda3: 80%;
+  --line-height-celda3-pequeño: 85%;
+
+  /* sombras */
+
+  --box-shadow-contenedor: 0 8px 8px rgba(0, 0, 0, 0.3);
+}
+
+/** EJEMPLO DE USAR FUENTES
+h1 {
+  font-family: var(--font-primary);
+  font-style: normal; 
+}
+
+em, .quote {
+  font-family: var(--font-primary);
+  font-style: italic; 
+}
+ /**
+
+body {
+            font-family: sans-serif;
+            background-color: #f0f0f0;
+            margin: 20px;
+        }
+
+
+
+      
+/* El contenedor principal de la cuadrícula */
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: var(--text-align-center, center);
+  min-height: var(--min-height-body, 100vh);
+  background-color: var(--background-color-body, #f5f5f5);
+}
+
+.grid-container {
+  display: grid;
+  /* Define 4 columnas, cada una ocupa una fracción del espacio (1fr) */
+  grid-template-columns: repeat(4, 1fr);
+  /* Define 10 filas, cada una con una altura de 50 píxeles */
+  grid-template-rows: repeat(10, 50px);
+  gap: 25px;
+  background-color: #f5f5f5;
+  padding: var(--padding-contenedor, 40px 150px);
+  box-shadow: var(--box-shadow-contenedor, 0 8px 8px rgba(0, 0, 0, 0.3));
+  width: var(--width-tamaño-contenedor, 50%);
+}
+
+/* Celda "Create and schedule" */
+#celda1 {
+  grid-column: 1 / 2;
+  grid-row: 1 / 6; /* Ocupa las primeras 5 filas (de la línea 1 a la 6) */
+  background-color: var(--background-color-celda-amarillo-claro);
+  border-radius: var(--border-radius-celda);
+  font-size: var(--font-size-celda-mediana, 2rem);
+  padding: var(--padding-celda1, 55px 30px);
+  line-height: var(--line-height-general);
+  font-family: var(--font-primary, italic);
+}
+
+#imagen-celda1 {
+  padding-right: var(--padding-right-celda1);
+  padding-top: var(--padding-top-imagen-celda1);
+  width: var(--width-tamaño-imagen-celda1);
+}
+
+/* Celda "Write your content" */
+#celda17 {
+  grid-column: 1 / 2;
+  grid-row: 6 / 11; /* Ocupa las últimas 5 filas (de la línea 6 a la 11) */
+  background-color: var(--background-color-celda-amarillo-oscuro);
+  border-radius: var(--border-radius-celda);
+  font-size: var(--font-size-celda-mediana);
+  padding: var(--padding-celda17, 15px 20px);
+  line-height: var(--line-height-general, 80%);
+  font-family: var(--font-primary, italic);
+}
+
+#imagen-celda17 {
+  width: var(--width-imagen-celda17);
+  display: flex;
+  padding: var(--padding-imagen-celda17, 30px 0px 60px 5px);
+}
+
+/* Celda grande "Social Media 10x Faster" */
+#celda2 {
+  grid-column: 2 / 4; /* Ocupa columnas 2 y 3 */
+  grid-row: 1 / 5; /* Ocupa 4 filas */
+  background-color: var(--background-color-celda-purpura);
+  border-radius: var(--border-radius-celda);
+  text-align: var(--text-align-center);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  line-height: var(--line-height-contenedor-grande);
+  font-family: var(--font-primary, italic);
+}
+
+#imagen-celda2 {
+  width: var(--width-imagen-celda2, 150px);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+#frase-arriba-celda2 {
+  padding-top: var(--padding-top-frase-grande-celda2, 50px);
+  padding-left: var(--padding-left-frase-grande-celda2, 20px);
+  padding-right: var(--padding-right-frase-grande-celda2, 20px);
+  font-size: var(--font-size-letra-grande-celda2);
+  font-family: var(--font-primary, italic);
+  color: var(--color-texto-blanco);
+}
+
+#frase-abajo-celda2 {
+  color: var(--color-texto-blanco);
+  font-family: var(--font-primary, italic);
+}
+
+/* Celda "Schedule to social media" */
+#celda3 {
+  grid-column: 4 / 5;
+  grid-row: 1 / 8;
+  background-color: var(--background-color-celda-lila);
+  border-radius: var(--border-radius-celda);
+  font-family: var(--font-primary);
+  padding: var(--padding-general-celda3);
+  display: flex;
+  flex-direction: column;           
+  justify-content: space-between;  
+  position: relative;
+  overflow: hidden;
+}
+
+#imagen-celda3 {
+  width: var(--width-imagen-celda3);
+  border-radius: var(--border-radius-celda); 
+  position: absolute;
+  top: 130px;
+  left: 70px;
+}
+
+#celda3 {
+  grid-column: 4 / 5;
+  grid-row: 1 / 8;
+  background-color: var(--background-color-celda-lila);
+  border-radius: var(--border-radius-celda);
+  font-family: var(--font-primary,italic);
+  padding: var(--padding-general-celda3);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+}
+
+
+#imagen-celda3 {
+  width: var(--width-imagen-celda3);
+  height: auto;
+  border-radius: var(--border-radius-celda);
+  position: absolute;
+  top: 25%; 
+  left: 75%; 
+  transform: translate(-50%); 
+  object-fit: cover;
+}
+
+#celda3 p {
+  color: var(--color-texto-negro);
+  margin: 0;
+}
+
+#celda3 p:first-of-type {
+  font-size: var(--font-size-p-grande-celda3);
+  font-weight: var(--font-weight, bold);
+  line-height: var(--line-height-celda3);
+}
+
+#celda3 p:last-of-type {
+  font-size: var(--font-size-p-pequeño-celda3);
+  line-height: var(--line-height-celda3-pequeño);
+}
+
+/* Celda "Manage multiple accounts" */
+#celda8 {
+  grid-column: 2 / 3;
+  grid-row: 5 / 8;
+  background-color: var(--background-color-celda-blanca);
+  border-radius: var(--border-radius-celda);
+  position: relative;
+  overflow: hidden;
+  line-height: var(--line-height-celda8);
+}
+
+#imagen-celda8 {
+  position: absolute;
+  top: 0;
+  left: 0px;
+  width: var(--width-imagen-celda8, 300px);
+  border-radius: var(--border-radius-imagen-celda8);
+  padding-top: var(--padding-imagen-celda8-top, 10px);
+  padding-left: var(--padding-imagen-celda8-left, 10px);
+}
+
+#celda8 p {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  font-size: var(--font-size-celda8);
+  padding-left: var(--padding-p-left-celda8);
+  padding-bottom: var( --padding-p-bottom-celda8);
+  margin: 0;
+  font-family: var(--font-primary, normal);
+}
+
+/* Celda "Maintain a consistent" */
+#celda6 {
+  grid-column: 3 / 4;
+  grid-row: 5 / 8; /* Ocupa 3 filas */
+  background-color: var(--background-color-celda-amarillo-oscuro);
+  border-radius: var(--border-radius-celda);
+  font-size: var(--font-size-celda6);
+  position: relative;
+  overflow: hidden;
+  padding-left: var(--padding-left-celda6);
+}
+
+#celda6 p {
+  padding: var(--padding-celda6-texto);
+  line-height: var(--line-height-celda6);
+  font-family: var(--font-primary, normal);
+}
+
+#imagen-celda6 {
+  width: var(--width-imagen-celda6);
+  padding-right: var(--padding-right-imagen-celda6);
+  padding-top: var(--padding-top-imagen-celda6);
+}
+
+/* Celda ">56% faster" */
+#celda11 {
+  grid-column: 2 / 3;
+  grid-row: 8 / 11; /* Ocupa 3 filas */
+  background-color: var(--background-color-celda-blanca);
+  border-radius: var(--border-radius-celda);
+  padding: var(--padding-celda11);
+  font-family: var(--font-primary);
+}
+
+#texto-celda11 {
+  font-size: var(--font-size-celda11);
+  font-weight: var(--font-weight, bold);
+}
+
+#imagen-celda11 {
+  width: var(--width-imagen-celda11);
+}
+
+#celda9 {
+  grid-column: 3 / 5;
+  grid-row: 8 / 11;
+  background-color: var(--background-color-celda-purpura);
+  border-radius: var(--border-radius-celda);
+
+  display: flex;
+  flex-direction: row; 
+  align-items: center; 
+  justify-content: center; 
+  padding: var(--padding-celda9); 
+  gap: 20px; 
+}
+
+#imagen-celda9 {
+  width: var(--width-imagen-celda9);
+  height: auto; 
+}
+
+
+#celda9 p {
+  color: var(--color-texto-blanco);
+  font-family: var(--font-primary);
+  font-size: var(--font-size-p-celda9);
+  line-height: var(--line-height-celda9);
+}
+
+#span_purpura {
+  color: var(--color-texto-purpura);
+  font-style: var(--font-style-italic, italic);
+}
+
+#span_amarillo {
+  color: var(--background-color-celda-amarillo-oscuro);
+}
