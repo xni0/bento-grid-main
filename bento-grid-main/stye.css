@@ -31,25 +31,24 @@
   --color-texto-blanco: #feffff;
   --color-texto-purpura: #7551d9;
 
-  /* --- TAMAÑOS CORREGIDOS --- */
-  
-  /* Se elimina --width-tamaño-contenedor, se gestiona en .grid-container */
   --width-imagen-celda9: 180px;
-  --width-imagen-celda8: 340px; /* Reducido de 300px */
-  --width-imagen-celda11: 140px; /* Reducido de 150px */
-  --width-imagen-celda2: 120px; /* Reducido de 150px */
-  --width-imagen-celda6: 220px; /* Reducido de 190px */
-  --width-imagen-celda3: 300px; /* Cambiado de 130% para mejor ajuste */
+  --width-imagen-celda8: 340px; 
+  --width-imagen-celda11: 140px; 
+  --width-imagen-celda2: 120px;
+  --width-imagen-celda6: 220px; 
+  --width-imagen-celda3: 300px; 
+  --width-contenedor: 90%;
+  --max-width-contenedor: 1100px;
   --min-height-body: 100vh;
   
-  /* Se elimina --padding-contenedor, se gestiona en .grid-container */
-  --padding-celda1: 50px 20px 40px 30px; /* Simplificado y reducido */
+
+  --padding-celda1: 50px 20px 40px 30px; 
   --padding-p-left-celda8: 25px;
   --padding-p-bottom-celda8: 20px;
 
-  --width-tamaño-imagen-celda1: 200px; /* Reducido de 180px */
-  --width-imagen-celda17: 200px; /* Reducido de 200px */
-  --padding-imagen-celda17: 35px 0px 0px 0px; /* Ajustado */
+  --width-tamaño-imagen-celda1: 200px; 
+  --width-imagen-celda17: 200px; 
+  --padding-imagen-celda17: 35px 0px 0px 0px;
   --padding-top-imagen-celda1: 15px;
   --padding-top-celda3: 5px;
   --padding-right-celda1: 10px;
@@ -59,8 +58,9 @@
   --padding-celda17: 20px;
   --padding-celda9: 20px;
   --padding-general-celda3: 30px;
+  --padding-body: 40px 0;
 
-  --padding-top-frase-grande-celda2: 30px; /* Reducido de 50px */
+  --padding-top-frase-grande-celda2: 30px;
   --padding-right-frase-grande-celda2: 20px;
   --padding-left-frase-grande-celda2: 20px;
 
@@ -72,18 +72,20 @@
   --padding-right-imagen-celda6: 15px;
   --padding-top-imagen-celda6: 10px;
 
-  /* --- TIPOGRAFÍAS CORREGIDAS --- */
-  /* Se reducen los tamaños 'rem' para que quepan al 100% de zoom */
+  --margin-contenedor: 0 auto;
+  --margin-top-contenedor: 15px; 
+  --margin-celda8: 0;
+ 
 
   --font-primary: "DM Sans", sans-serif;
-  --font-size-celda-mediana: 1.7rem; /* Era 2.2rem */
-  --font-size-letra-grande-celda2: 2.5rem; /* Era 3rem */
-  --font-size-celda6: 1.2rem; /* Era 1.6rem */
-  --font-size-celda11: 3rem; /* Era 3rem */
-  --font-size-p-celda9: 2rem; /* Era 1.9rem */
-  --font-size-p-grande-celda3: 1.6rem; /* Era 1.8rem */
-  --font-size-p-pequeño-celda3: 0.9rem; /* Era 1.1rem */
-  --font-size-celda8: 1.2rem; /* Era 1.5rem */
+  --font-size-celda-mediana: 1.7rem; 
+  --font-size-letra-grande-celda2: 2.5rem; 
+  --font-size-celda6: 1.2rem; 
+  --font-size-celda11: 3rem; 
+  --font-size-p-celda9: 2rem; 
+  --font-size-p-grande-celda3: 1.6rem; 
+  --font-size-p-pequeño-celda3: 0.9rem; 
+  --font-size-celda8: 1.2rem; 
   --font-size-p-celda6: 1.2rem;
 
   --font-style-italic: italic;
@@ -97,29 +99,27 @@
   --text-align-center: center;
 
   /* alineacion (ajustados para los nuevos tamaños) */
-  --line-height-general: 0.8; /* Cambiado a un valor relativo normal */
-  --line-height-contenedor-grande: 1.3; /* Ajustado */
-  --line-height-celda8: 1.1; /* Ajustado */
-  --line-height-celda6: 1.1; /* Ajustado */
-  --line-height-celda9: 1.3; /* Ajustado */
-  --line-height-celda3: 1; /* Ajustado */
-  --line-height-celda3-pequeño: 1; /* Ajustado */
+  --line-height-general: 0.8; 
+  --line-height-contenedor-grande: 1.3; 
+  --line-height-celda8: 1.1; 
+  --line-height-celda6: 1.1; 
+  --line-height-celda9: 1.3; 
+  --line-height-celda3: 1; 
+  --line-height-celda3-pequeño: 1; 
   --line-height-celda2: 1.2;
   
-  /* Se elimina la sombra del contenedor, no está en el diseño original */
 }
 
 
-/* --- ESTILOS DE BODY Y CONTENEDOR CORREGIDOS --- */
 
 body {
   font-family: var(--font-primary, sans-serif);
   background-color: var(--background-color-body, #f5f5f5);
   display: flex;
   justify-content: center;
-  align-items: center; /* Centra verticalmente si el contenido es menor */
+  align-items: center; 
   min-height: var(--min-height-body, 100vh);
-  padding: 40px 0; /* Añade espacio arriba y abajo del contenedor */
+  padding: var(--padding-body); /
 }
 
 .grid-container {
@@ -132,15 +132,12 @@ body {
   gap: 25px;
   background-color: #f5f5f5;
   
-  /* --- ESTA ES LA PARTE IMPORTANTE --- */
-  /* En lugar de width: 50%, usamos max-width */
-  width: 90%; /* Ocupa el 90% del ancho disponible */
-  max-width: 1100px; /* Pero como máximo 1100px */
-  margin: 0 auto; /* Centra el contenedor horizontalmente */
-  /* Se elimina el padding y box-shadow del contenedor */
+ 
+  width: var(--width-contenedor); 
+  max-width: var( --max-width-contenedor); 
+  margin: var(-margin-contenedor); 
+ 
 }
-
-/* --- ESTILOS DE CELDAS (Con ajustes menores) --- */
 
 /* Celda "Create and schedule" */
 #celda1 {
@@ -151,7 +148,7 @@ body {
   font-size: var(--font-size-celda-mediana);
   padding: var(--padding-celda1);
   line-height: var(--line-height-general);
-  font-family: var(--font-primary, italic); /* Quitado 'italic' por defecto */
+  font-family: var(--font-primary, italic); 
 }
 
 #imagen-celda1 {
@@ -206,17 +203,16 @@ body {
   font-size: var(--font-size-letra-grande-celda2);
   font-family: var(--font-primary);
   color: var(--color-texto-blanco);
-  line-height: var(--line-height-celda2); /* Ajuste específico */
+  line-height: var(--line-height-celda2); 
 }
 
 #frase-abajo-celda2 {
   color: var(--color-texto-blanco);
   font-family: var(--font-primary);
-  margin-top: 15px; /* Añadido margen */
+  margin-top: var(--margin-top-contenedor);
 }
 
 /* Celda "Schedule to social media" */
-/* Se elimina la regla duplicada de #celda3 y #imagen-celda3 */
 #celda3 {
   grid-column: 4 / 5;
   grid-row: 1 / 8;
@@ -244,8 +240,8 @@ body {
 
 #celda3 p {
   color: var(--color-texto-negro);
-  margin: 0;
-  position: relative; /* Añadido para que esté sobre la imagen */
+  margin: var(--margin-celda8);
+  position: relative; 
   z-index: 1;
 }
 
@@ -318,13 +314,13 @@ body {
   width: var(--width-imagen-celda6);
   padding-right: var(--padding-right-imagen-celda6);
   padding-top: var(--padding-top-imagen-celda6);
-  display: block; /* Añadido */
+  display: block;
 }
 
 /* Celda ">56% faster" */
 #celda11 {
   grid-column: 2 / 3;
-  grid-row: 8 / 11; /* Ocupa 3 filas */
+  grid-row: 8 / 11; 
   background-color: var(--background-color-celda-blanca);
   border-radius: var(--border-radius-celda);
   padding: var(--padding-celda11);
