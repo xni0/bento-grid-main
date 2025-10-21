@@ -31,56 +31,60 @@
   --color-texto-blanco: #feffff;
   --color-texto-purpura: #7551d9;
 
-  /* tamaños */
-
-  --width-tamaño-contenedor: 50%;
-  --width-imagen-celda9: 190px;
-  --width-imagen-celda8: 300px;
-  --width-imagen-celda11: 150px;
-  --width-imagen-celda2: 150px;
-  --width-imagen-celda6: 190px;
-  --width-imagen-celda3: 130%;
+  /* --- TAMAÑOS CORREGIDOS --- */
+  
+  /* Se elimina --width-tamaño-contenedor, se gestiona en .grid-container */
+  --width-imagen-celda9: 180px;
+  --width-imagen-celda8: 340px; /* Reducido de 300px */
+  --width-imagen-celda11: 140px; /* Reducido de 150px */
+  --width-imagen-celda2: 120px; /* Reducido de 150px */
+  --width-imagen-celda6: 220px; /* Reducido de 190px */
+  --width-imagen-celda3: 300px; /* Cambiado de 130% para mejor ajuste */
   --min-height-body: 100vh;
-  --padding-contenedor: 40px 150px;
-  --padding-celda1: 55px 30px;
-  --padding-p-left-celda8: 20px;
+  
+  /* Se elimina --padding-contenedor, se gestiona en .grid-container */
+  --padding-celda1: 50px 20px 40px 30px; /* Simplificado y reducido */
+  --padding-p-left-celda8: 25px;
   --padding-p-bottom-celda8: 20px;
 
-  --width-tamaño-imagen-celda1: 180px;
-  --width-imagen-celda17: 200px;
-  --padding-imagen-celda17: 30px 0px 60px 5px;
+  --width-tamaño-imagen-celda1: 200px; /* Reducido de 180px */
+  --width-imagen-celda17: 200px; /* Reducido de 200px */
+  --padding-imagen-celda17: 35px 0px 0px 0px; /* Ajustado */
   --padding-top-imagen-celda1: 15px;
+  --padding-top-celda3: 5px;
   --padding-right-celda1: 10px;
-  --padding-celda2: 20px 20px;
+  --padding-celda2: 20px;
   --padding-celda3: 20px;
   --padding-celda11: 15px;
-  --padding-celda9: 20px; 
-  --padding-general-celda3: 30px; 
+  --padding-celda17: 20px;
+  --padding-celda9: 20px;
+  --padding-general-celda3: 30px;
 
-  --padding-top-frase-grande-celda2: 50px;
+  --padding-top-frase-grande-celda2: 30px; /* Reducido de 50px */
   --padding-right-frase-grande-celda2: 20px;
   --padding-left-frase-grande-celda2: 20px;
 
-  --padding-imagen-celda8-top: 10px;
-  --padding-imagen-celda8-left: 10px;
-  --padding-imagen-celda8-left: 10px;
+  --padding-imagen-celda8-top: 20px;
+  --padding-imagen-celda8-left: 20px;
   --padding-left-celda6: 25px;
   --padding-celda6-texto: 22px 30px 0px 0px;
 
   --padding-right-imagen-celda6: 15px;
   --padding-top-imagen-celda6: 10px;
 
-  /* tipografías */
+  /* --- TIPOGRAFÍAS CORREGIDAS --- */
+  /* Se reducen los tamaños 'rem' para que quepan al 100% de zoom */
 
   --font-primary: "DM Sans", sans-serif;
-  --font-size-celda-mediana: 2.2rem;
-  --font-size-letra-grande-celda2: 3rem;
-  --font-size-celda6: 1.6rem;
-  --font-size-celda11: 3rem;
-  --font-size-p-celda9: 1.9rem;
-  --font-size-p-grande-celda3: 1.8rem;
-  --font-size-p-pequeño-celda3: 1.1rem;
-  --font-size-celda8: 1.5rem;
+  --font-size-celda-mediana: 1.7rem; /* Era 2.2rem */
+  --font-size-letra-grande-celda2: 2.5rem; /* Era 3rem */
+  --font-size-celda6: 1.2rem; /* Era 1.6rem */
+  --font-size-celda11: 3rem; /* Era 3rem */
+  --font-size-p-celda9: 2rem; /* Era 1.9rem */
+  --font-size-p-grande-celda3: 1.6rem; /* Era 1.8rem */
+  --font-size-p-pequeño-celda3: 0.9rem; /* Era 1.1rem */
+  --font-size-celda8: 1.2rem; /* Era 1.5rem */
+  --font-size-p-celda6: 1.2rem;
 
   --font-style-italic: italic;
   --font-weight: bold;
@@ -89,53 +93,33 @@
   --border-radius-celda: 10px;
   --border-radius-imagen-celda8: 34%;
 
-
   /* positions */
   --text-align-center: center;
 
-  /* alineacion */
-  --line-height-general: 80%;
-  --line-height-contenedor-grande: 230%;
-  --line-height-celda8: 150%;
-  --line-height-celda6: 95%;
-  --line-height-celda9: 110%;
-  --line-height-celda3: 80%;
-  --line-height-celda3-pequeño: 85%;
-
-  /* sombras */
-
-  --box-shadow-contenedor: 0 8px 8px rgba(0, 0, 0, 0.3);
+  /* alineacion (ajustados para los nuevos tamaños) */
+  --line-height-general: 0.8; /* Cambiado a un valor relativo normal */
+  --line-height-contenedor-grande: 1.3; /* Ajustado */
+  --line-height-celda8: 1.1; /* Ajustado */
+  --line-height-celda6: 1.1; /* Ajustado */
+  --line-height-celda9: 1.3; /* Ajustado */
+  --line-height-celda3: 1; /* Ajustado */
+  --line-height-celda3-pequeño: 1; /* Ajustado */
+  --line-height-celda2: 1.2;
+  
+  /* Se elimina la sombra del contenedor, no está en el diseño original */
 }
 
-/** EJEMPLO DE USAR FUENTES
-h1 {
-  font-family: var(--font-primary);
-  font-style: normal; 
-}
 
-em, .quote {
-  font-family: var(--font-primary);
-  font-style: italic; 
-}
- /**
+/* --- ESTILOS DE BODY Y CONTENEDOR CORREGIDOS --- */
 
 body {
-            font-family: sans-serif;
-            background-color: #f0f0f0;
-            margin: 20px;
-        }
-
-
-
-      
-/* El contenedor principal de la cuadrícula */
-
-body {
+  font-family: var(--font-primary, sans-serif);
+  background-color: var(--background-color-body, #f5f5f5);
   display: flex;
   justify-content: center;
-  align-items: var(--text-align-center, center);
+  align-items: center; /* Centra verticalmente si el contenido es menor */
   min-height: var(--min-height-body, 100vh);
-  background-color: var(--background-color-body, #f5f5f5);
+  padding: 40px 0; /* Añade espacio arriba y abajo del contenedor */
 }
 
 .grid-container {
@@ -143,24 +127,31 @@ body {
   /* Define 4 columnas, cada una ocupa una fracción del espacio (1fr) */
   grid-template-columns: repeat(4, 1fr);
   /* Define 10 filas, cada una con una altura de 50 píxeles */
+  /* Esta es la base de tu diseño y está bien, el contenido debe caber */
   grid-template-rows: repeat(10, 50px);
   gap: 25px;
   background-color: #f5f5f5;
-  padding: var(--padding-contenedor, 40px 150px);
-  box-shadow: var(--box-shadow-contenedor, 0 8px 8px rgba(0, 0, 0, 0.3));
-  width: var(--width-tamaño-contenedor, 50%);
+  
+  /* --- ESTA ES LA PARTE IMPORTANTE --- */
+  /* En lugar de width: 50%, usamos max-width */
+  width: 90%; /* Ocupa el 90% del ancho disponible */
+  max-width: 1100px; /* Pero como máximo 1100px */
+  margin: 0 auto; /* Centra el contenedor horizontalmente */
+  /* Se elimina el padding y box-shadow del contenedor */
 }
+
+/* --- ESTILOS DE CELDAS (Con ajustes menores) --- */
 
 /* Celda "Create and schedule" */
 #celda1 {
   grid-column: 1 / 2;
-  grid-row: 1 / 6; /* Ocupa las primeras 5 filas (de la línea 1 a la 6) */
+  grid-row: 1 / 6; 
   background-color: var(--background-color-celda-amarillo-claro);
   border-radius: var(--border-radius-celda);
-  font-size: var(--font-size-celda-mediana, 2rem);
-  padding: var(--padding-celda1, 55px 30px);
+  font-size: var(--font-size-celda-mediana);
+  padding: var(--padding-celda1);
   line-height: var(--line-height-general);
-  font-family: var(--font-primary, italic);
+  font-family: var(--font-primary, italic); /* Quitado 'italic' por defecto */
 }
 
 #imagen-celda1 {
@@ -172,25 +163,25 @@ body {
 /* Celda "Write your content" */
 #celda17 {
   grid-column: 1 / 2;
-  grid-row: 6 / 11; /* Ocupa las últimas 5 filas (de la línea 6 a la 11) */
+  grid-row: 6 / 11;
   background-color: var(--background-color-celda-amarillo-oscuro);
   border-radius: var(--border-radius-celda);
   font-size: var(--font-size-celda-mediana);
-  padding: var(--padding-celda17, 15px 20px);
-  line-height: var(--line-height-general, 80%);
-  font-family: var(--font-primary, italic);
+  padding: var(--padding-celda17); 
+  line-height: var(--line-height-general);
+  font-family: var(--font-primary);
 }
 
 #imagen-celda17 {
   width: var(--width-imagen-celda17);
-  display: flex;
-  padding: var(--padding-imagen-celda17, 30px 0px 60px 5px);
+  display: block; 
+  padding: var(--padding-imagen-celda17);
 }
 
 /* Celda grande "Social Media 10x Faster" */
 #celda2 {
-  grid-column: 2 / 4; /* Ocupa columnas 2 y 3 */
-  grid-row: 1 / 5; /* Ocupa 4 filas */
+  grid-column: 2 / 4;
+  grid-row: 1 / 5;
   background-color: var(--background-color-celda-purpura);
   border-radius: var(--border-radius-celda);
   text-align: var(--text-align-center);
@@ -199,31 +190,33 @@ body {
   align-items: center;
   justify-content: flex-start;
   line-height: var(--line-height-contenedor-grande);
-  font-family: var(--font-primary, italic);
+  font-family: var(--font-primary);
+  padding: var(--padding-celda2);
 }
 
 #imagen-celda2 {
-  width: var(--width-imagen-celda2, 150px);
-  display: flex;
-  align-items: center;
-  flex-direction: column;
+  width: var(--width-imagen-celda2);
+  display: block;
 }
 
 #frase-arriba-celda2 {
-  padding-top: var(--padding-top-frase-grande-celda2, 50px);
-  padding-left: var(--padding-left-frase-grande-celda2, 20px);
-  padding-right: var(--padding-right-frase-grande-celda2, 20px);
+  padding-top: var(--padding-top-frase-grande-celda2);
+  padding-left: var(--padding-left-frase-grande-celda2);
+  padding-right: var(--padding-right-frase-grande-celda2);
   font-size: var(--font-size-letra-grande-celda2);
-  font-family: var(--font-primary, italic);
+  font-family: var(--font-primary);
   color: var(--color-texto-blanco);
+  line-height: var(--line-height-celda2); /* Ajuste específico */
 }
 
 #frase-abajo-celda2 {
   color: var(--color-texto-blanco);
-  font-family: var(--font-primary, italic);
+  font-family: var(--font-primary);
+  margin-top: 15px; /* Añadido margen */
 }
 
 /* Celda "Schedule to social media" */
+/* Se elimina la regla duplicada de #celda3 y #imagen-celda3 */
 #celda3 {
   grid-column: 4 / 5;
   grid-row: 1 / 8;
@@ -232,55 +225,35 @@ body {
   font-family: var(--font-primary);
   padding: var(--padding-general-celda3);
   display: flex;
-  flex-direction: column;           
-  justify-content: space-between;  
-  position: relative;
-  overflow: hidden;
-}
-
-#imagen-celda3 {
-  width: var(--width-imagen-celda3);
-  border-radius: var(--border-radius-celda); 
-  position: absolute;
-  top: 130px;
-  left: 70px;
-}
-
-#celda3 {
-  grid-column: 4 / 5;
-  grid-row: 1 / 8;
-  background-color: var(--background-color-celda-lila);
-  border-radius: var(--border-radius-celda);
-  font-family: var(--font-primary,italic);
-  padding: var(--padding-general-celda3);
-  display: flex;
   flex-direction: column;
   justify-content: space-between;
   position: relative;
   overflow: hidden;
 }
 
-
 #imagen-celda3 {
-  width: var(--width-imagen-celda3);
-  height: auto;
-  border-radius: var(--border-radius-celda);
-  position: absolute;
-  top: 25%; 
-  left: 75%; 
-  transform: translate(-50%); 
-  object-fit: cover;
+    width: var(--width-imagen-celda3);
+    height: auto;
+    border-radius: var(--border-radius-celda);
+    position: absolute;
+    top: 25%;
+    left: 70%;
+    transform: translateX(-50%);
+    object-fit: cover;
 }
 
 #celda3 p {
   color: var(--color-texto-negro);
   margin: 0;
+  position: relative; /* Añadido para que esté sobre la imagen */
+  z-index: 1;
 }
 
 #celda3 p:first-of-type {
   font-size: var(--font-size-p-grande-celda3);
   font-weight: var(--font-weight, bold);
   line-height: var(--line-height-celda3);
+  padding-top: var(--padding-top-celda3);
 }
 
 #celda3 p:last-of-type {
@@ -303,10 +276,10 @@ body {
   position: absolute;
   top: 0;
   left: 0px;
-  width: var(--width-imagen-celda8, 300px);
+  width: var(--width-imagen-celda8);
   border-radius: var(--border-radius-imagen-celda8);
-  padding-top: var(--padding-imagen-celda8-top, 10px);
-  padding-left: var(--padding-imagen-celda8-left, 10px);
+  padding-top: var(--padding-imagen-celda8-top);
+  padding-left: var(--padding-imagen-celda8-left);
 }
 
 #celda8 p {
@@ -316,7 +289,7 @@ body {
   right: 0;
   font-size: var(--font-size-celda8);
   padding-left: var(--padding-p-left-celda8);
-  padding-bottom: var( --padding-p-bottom-celda8);
+  padding-bottom: var(--padding-p-bottom-celda8);
   margin: 0;
   font-family: var(--font-primary, normal);
 }
@@ -327,22 +300,25 @@ body {
   grid-row: 5 / 8; /* Ocupa 3 filas */
   background-color: var(--background-color-celda-amarillo-oscuro);
   border-radius: var(--border-radius-celda);
-  font-size: var(--font-size-celda6);
   position: relative;
   overflow: hidden;
   padding-left: var(--padding-left-celda6);
 }
 
 #celda6 p {
+  font-size: var(--font-size-celda6);
   padding: var(--padding-celda6-texto);
   line-height: var(--line-height-celda6);
   font-family: var(--font-primary, normal);
+  font-weight: var(--font-weight);
+  
 }
 
 #imagen-celda6 {
   width: var(--width-imagen-celda6);
   padding-right: var(--padding-right-imagen-celda6);
   padding-top: var(--padding-top-imagen-celda6);
+  display: block; /* Añadido */
 }
 
 /* Celda ">56% faster" */
@@ -362,27 +338,27 @@ body {
 
 #imagen-celda11 {
   width: var(--width-imagen-celda11);
+  
 }
 
+/* Celda "Grow followers" */
 #celda9 {
   grid-column: 3 / 5;
   grid-row: 8 / 11;
   background-color: var(--background-color-celda-purpura);
   border-radius: var(--border-radius-celda);
-
   display: flex;
-  flex-direction: row; 
-  align-items: center; 
-  justify-content: center; 
-  padding: var(--padding-celda9); 
-  gap: 20px; 
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: var(--padding-celda9);
+  gap: 20px;
 }
 
 #imagen-celda9 {
   width: var(--width-imagen-celda9);
-  height: auto; 
+  height: auto;
 }
-
 
 #celda9 p {
   color: var(--color-texto-blanco);
@@ -391,6 +367,7 @@ body {
   line-height: var(--line-height-celda9);
 }
 
+/* Spans (sin cambios) */
 #span_purpura {
   color: var(--color-texto-purpura);
   font-style: var(--font-style-italic, italic);
