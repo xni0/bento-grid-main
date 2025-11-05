@@ -91,6 +91,34 @@
   --font-style-italic: italic;
   --font-weight: bold;
 
+  /* alineacion (ajustados para los nuevos tamaños) */
+  --line-height-general: 0.8; 
+  --line-height-contenedor-grande: 1.3; 
+  --line-height-celda8: 1.1; 
+  --line-height-celda6: 1.1; 
+  --line-height-celda9: 1.3; 
+  --line-height-celda3: 1; 
+  --line-height-celda3-pequeño: 1; 
+  --line-height-celda2: 1.2;
+  
+  /* --- NUEVAS VARIABLES PARA EL RESPONSIVE --- */
+  --min-height-celda3-tablet: 400px;
+  --min-height-celda3-mobile: 350px;
+  --font-size-p-pequeño-celda3-tablet: 1.05rem;
+  --font-size-p-pequeño-celda3-mobile: 0.7rem;
+
+  --width-imagen-celda3-tablet: 80%;
+  --max-width-imagen-celda3-tablet: 300px;
+  --max-width-imagen-celda3-mobile: 250px;
+  --padding-imagen-celda3-responsive: 7px;
+
+  --width-imagen-celda17-tablet: 80%;
+  --max-width-imagen-celda17-tablet: 300px;
+  --padding-imagen-celda17-tablet: 12px;
+
+  --min-height-celda8-responsive: 250px;
+  --font-size-p-celda8-tablet: 1.7rem;
+
   /* border radius */
   --border-radius-celda: 10px;
   --border-radius-imagen-celda8: 34%;
@@ -367,8 +395,158 @@ body {
 #span_purpura {
   color: var(--color-texto-purpura);
   font-style: var(--font-style-italic, italic);
+  display: block;
 }
 
 #span_amarillo {
   color: var(--background-color-celda-amarillo-oscuro);
+}
+
+/* Responsive Design */
+
+/* Tablet */
+@media (max-width: 900px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(10, auto);
+  }
+
+  #celda1 {
+    grid-column: 1 / 3;
+    grid-row: 1 / 4;
+    text-align: var(--text-align-center);
+  }
+
+  #celda1 img, p {
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #span_purpura {
+    display: inline;
+  }
+
+  #celda2 {
+    grid-column: 1 / 3;
+    grid-row: 4 / 7;
+  }
+  #celda3 {
+    grid-column: 1 / 3;
+    grid-row: 7 / 11;
+    min-height: var(--min-height-celda3-tablet);
+    text-align: var(--text-align-center);
+  }
+
+  #celda3 p:last-of-type {
+    font-size: var(--font-size-p-pequeño-celda3-tablet);
+  }
+
+  #imagen-celda3 {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: var(--width-imagen-celda3-tablet); 
+    max-width: var(--max-width-imagen-celda3-tablet); 
+    padding: var(--padding-imagen-celda3-responsive);
+  }
+
+  #celda17 {
+    grid-column: 1 / 3;
+    grid-row: 11 / 14;
+    text-align: var(--text-align-center);
+  }
+
+  #imagen-celda17 {
+    width: var(--width-imagen-celda17-tablet); 
+    max-width: var(--max-width-imagen-celda17-tablet); 
+    padding: var(--padding-imagen-celda17-tablet);
+  }
+
+  #imagen-celda17 {
+    margin: 0 auto;
+  }
+
+  #celda8 {
+    grid-column: 1 / 2;
+    grid-row: 14 / 16;
+    min-height: var(--min-height-celda8-responsive);
+  }
+
+  #celda8 p {
+    font-size: var(--font-size-p-celda8-tablet);
+  }
+
+  #celda6 {
+    grid-column: 2 / 3;
+    grid-row: 14 / 16;
+  }
+  #celda11 {
+    grid-column: 1 / 2;
+    grid-row: 16 / 18;
+  }
+  #celda9 {
+    grid-column: 2 / 3;
+    grid-row: 16 / 18;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(10, auto);
+  }
+
+  #celda1 {
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+    text-align: var(--text-align-center);
+  }
+  #celda2 {
+    grid-column: 1 / 2;
+    grid-row: 3 / 6;
+  }
+  #celda3 {
+    grid-column: 1 / 2;
+    grid-row: 6 / 10;
+    min-height: var(--min-height-celda3-mobile);
+    text-align: var(--text-align-center);
+  }
+    #celda3 p:last-of-type {
+    font-size: var(--font-size-p-pequeño-celda3-mobile);
+  }
+
+  #imagen-celda3 {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: var(--width-imagen-celda3-tablet); 
+    max-width: var(--max-width-imagen-celda3-mobile); 
+    padding: var(--padding-imagen-celda3-responsive);
+  }
+
+  #celda17 {
+    grid-column: 1 / 2;
+    grid-row: 10 / 13;
+    text-align: var(--text-align-center);
+  }
+  #celda8 {
+    grid-column: 1 / 2;
+    grid-row: 13 / 15;
+    min-height: var(--min-height-celda8-responsive); 
+  }
+  #celda6 {
+    grid-column: 1 / 2;
+    grid-row: 15 / 17;
+  }
+  #celda11 {
+    grid-column: 1 / 2;
+    grid-row: 17 / 19;
+  }
+  #celda9 {
+    grid-column: 1 / 2;
+    grid-row: 19 / 21;
+  }
+
 }
